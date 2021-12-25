@@ -64,6 +64,14 @@ void onOffByTwo() {
   delay(SLEEPTIME);
 }
 
+void randomPin() {
+  int pin = random(ledSize);
+  digitalWrite(ledPins[pin], HIGH);
+  delay(1000);
+  digitalWrite(ledPins[pin], LOW);
+  delay(1000);
+}
+
 void setup() {
   for (int i = 0; i < ledSize; i++) {
     pinMode(ledPins[i], OUTPUT);
@@ -82,5 +90,6 @@ void loop() {
     middleRightAndLeft();
     }
   */
-  onOffByTwo();
+  //onOffByTwo();
+  randomPin();
 }
