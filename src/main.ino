@@ -1,10 +1,9 @@
 const int ledPins[] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 const int ledSize = sizeof(ledPins);
 const int iterations = 2;
+const int SLEEPTIME = 1000;
 
 void allOnOff() {
-  const int SLEEPTIME = 1000;
-
   for (int i = 0; i < ledSize; i++) {
     digitalWrite(ledPins[i], HIGH);
   }
@@ -17,7 +16,6 @@ void allOnOff() {
 }
 
 void onOffAfterTheOther() {
-  const int SLEEPTIME = 100;
   for (int i = 0; i < ledSize; i++) {
     digitalWrite(ledPins[i], HIGH);
     delay(SLEEPTIME);
@@ -29,7 +27,6 @@ void onOffAfterTheOther() {
 }
 
 void middleRightAndLeft() {
-  const int SLEEPTIME = 100;
   for (int i = ledSize; i >= 0; i--) {
     digitalWrite(ledPins[i], HIGH);
     delay(SLEEPTIME);
@@ -41,8 +38,6 @@ void middleRightAndLeft() {
 }
 
 void onOffByTwo() {
-  const int SLEEPTIME = 1000;
-
   for (int i = 0; i < ledSize; i+=2) {
     digitalWrite(ledPins[i], HIGH);
   }
@@ -79,17 +74,24 @@ void setup() {
 }
 
 void loop() {
-  /*
     for (int i = 0; i < iterations; i++) {
     allOnOff();
     }
+    delay(SLEEPTIME);
     for (int i = 0; i < iterations; i++) {
     onOffAfterTheOther();
     }
+    delay(SLEEPTIME);
     for (int i = 0; i < iterations; i++) {
     middleRightAndLeft();
     }
-  */
-  //onOffByTwo();
-  randomPin();
+    delay(SLEEPTIME);
+    for (int i = 0; i < iterations; i++) {
+      onOffByTwo();
+    }
+    delay(SLEEPTIME);
+    for (int i = 0; i < iterations; i++) {
+      randomPin();
+    }
+    delay(SLEEPTIME);
 }
