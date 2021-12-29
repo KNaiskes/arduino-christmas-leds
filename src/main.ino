@@ -1,7 +1,7 @@
 const int ledPins[] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 const int ledSize = sizeof(ledPins);
 const int iterations = 2;
-const int SLEEPTIME = 5000;
+const int SLEEPTIME = 300;
 
 void allOnOff() {
   for (int i = 0; i < ledSize; i++) {
