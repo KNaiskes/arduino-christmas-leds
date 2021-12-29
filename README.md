@@ -1,8 +1,12 @@
-# Arduino-leds-show
+# arduino-leds-show
 
 An Arduino leds show sketch
 
 ![20211225_231509](https://user-images.githubusercontent.com/6069054/147653337-6ff4d833-6d2d-436a-84eb-d8f13e1a6a19.jpg)
+
+# Video
+
+[![Video](https://i.ytimg.com/vi/-5mhqo8cFj8/1.jpg)](https://youtu.be/-5mhqo8cFj8)
 
 ## Components
 
@@ -12,6 +16,17 @@ An Arduino leds show sketch
 - 25x male to male jumper wires (might need more or less depending on your circuit)
 - 1 breadboard
 
-# Video
+## Upload sketch to Arduino using platformio
 
-[![Video](https://i.ytimg.com/vi/-5mhqo8cFj8/1.jpg)](https://youtu.be/-5mhqo8cFj8)
+### Install platformio
+```
+$ cd arduino-leds-show/
+$ python -m venv venv
+$ source venv/bin/activate
+$ pip install platformio
+```
+
+### Upload sketch
+```
+$ platformio run --target upload
+```
